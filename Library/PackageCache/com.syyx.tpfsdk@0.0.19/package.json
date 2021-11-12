@@ -1,0 +1,17 @@
+{
+    "name": "com.syyx.tpfsdk",
+    "version": "0.0.19",
+    "displayName": "TPFSDK",
+    "description": "TPFSDK help you deal with multiple channel distribution, also provide common business feature power by tpf-server",
+    "unity": "2019.1",
+   "keywords": [
+      "syyx",
+      "tpfsdk",
+      "tpf",
+      "sdk"
+    ],
+    "author": {
+      "name": "syyx-tpf",
+      "url": "http://tpf-redmine.shangyoo.cn/redmine/"
+    }
+  }

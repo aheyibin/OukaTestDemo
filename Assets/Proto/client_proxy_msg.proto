@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.tpf.nihong.client.msg.proto";
+option java_outer_classname = "ClientProxy";
+
+package msg;
+
+message ClientRouterMsg {
+    string serviceName   = 1;
+    string token        = 2;
+    string userid       = 3;
+    string channlId     = 4;
+    string msgId         = 5;
+    bytes msgContent     = 6;
+}
+
+
+message ClientAuthMsg {
+    string token        = 1;
+    string userid         = 2;
+}
+
+message ParameterMsg {
+    string userId   = 1;
+    string channelId     = 2;
+}

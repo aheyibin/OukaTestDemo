@@ -1,0 +1,13 @@
+{
+  "appId": "50",
+  "appKey": "mmo",
+  "appSecret": "pppu",
+  "areaId":"201",
+  "channelId": "2",
+  "tpfProxyUrl": "http://10.100.1.22:20010",
+  "isUseNormalUrlLogin" : true,
+  "loginAreaKey" : "205c643a637a9e2cf7792dd39e118ff8",
+  "loginAppKey" : "46d92e8195b7b12847a0782934b7c4c7",
+  "loginOfficialHost" : "http://192.168.10.197:10061",
+  "loginHost" : "http://192.168.10.197:996/tpf-login",
+}

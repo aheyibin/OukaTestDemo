@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.tpf.nihong.client.msg.proto";
+option java_outer_classname = "ClientLogin";
+
+package msg;
+
+message Login {
+    string account = 1;
+    string password = 2;
+}
+
+message NewAccount {
+    string account = 1;
+    string password = 2;
+}
+
+message CardType {
+    string account = 1;     //账号
+    string pfId = 2;        //渠道
+}
+
+message Card {
+    string cardId = 1;        //激活码
+    string account = 2;     //账号
+    string pfId = 3;        //渠道
+}

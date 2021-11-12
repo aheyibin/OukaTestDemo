@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.tpf.nihong.client.msg.proto";
+option java_outer_classname = "NihongClientWorld";
+
+package msg;
+
+message DoNihongTask {
+    string account = 1;
+    string taskId = 2;
+    int32 test = 3;
+}
+
+message NihongLogin{
+    string account = 1;
+    string password = 2;
+}
+
+message  UserLoginRequest{
+    string UserId = 1;
+    string Token = 2;
+}
+
+message  UserLoginResponse{
+    string Msg = 1;
+}

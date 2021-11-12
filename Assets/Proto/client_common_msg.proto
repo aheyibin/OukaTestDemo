@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.tpf.nihong.client.msg.proto";
+option java_outer_classname = "ClientCommon";
+
+package msg;
+
+message ServerResRouterMsg {
+    string msgId = 1;		//消息ID,对应请求的消息id
+    string msgType = 2;		//返回消息的类型
+    bytes msgContent = 3;	//返回消息体
+}
+
+message ServerErrorMsg{
+    enum ErrorType //枚举消息类型
+    {
+        OK = 0;
+        ERROR = 1;
+        BUSY = 2;
+        NO_ACTIVATION = 3;  //账号没有激活
+        NO_OPEN_SERVER = 4;  //没有开服
+    }
+    int32 errorCode = 1;
+    string info = 2;
+}
+
+message ActivationCardMsg{
+    enum ErrorType //枚举消息类型
+    {
+        OK = 0;
+        ERROR = 1;
+        BUSY = 2;
+        NULL_PFID = 3;
+        ERROR_PFID = -3;
+    }
+    int32 errorCode = 1;
+    string info = 2;
+}

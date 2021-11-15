@@ -18,9 +18,9 @@ namespace XNode.Examples.MathNodes {
         public override object GetValue(XNode.NodePort port) {
 
             // Get new a and b values from input connections. Fallback to field values if input is not connected
-            float a = GetInputValue<float>("a", 11);
-            float b = GetInputValue<float>("b", 12);
-            float c = GetInputValue<float>("a", 13);
+            float a = GetInputValue<float>("a", this.a);
+            float b = GetInputValue<float>("b", this.b);
+            float c = GetInputValue<float>("a", this.forceSetValue);
             float d = GetInputValue<float>("d", 21);
             float e = GetInputValue<float>("e", this.a);
 

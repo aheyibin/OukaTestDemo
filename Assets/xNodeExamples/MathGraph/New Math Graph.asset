@@ -91,7 +91,7 @@ MonoBehaviour:
   x: 0
   y: 0
   z: 0
-  vector: {x: -0.22000003, y: 2.14, z: 50}
+  vector: {x: 55, y: 45, z: 66}
 --- !u!114 &114441428018438906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +141,7 @@ MonoBehaviour:
     - a
     - b
     - result
+    - forceSetValue
     values:
     - _fieldName: a
       _node: {fileID: 114559941187276150}
@@ -169,8 +170,18 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: forceSetValue
+      _node: {fileID: 114559941187276150}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   a: 0
   b: 0
+  forceSetValue: 4
   result: 0
   mathType: 0
 --- !u!114 &114652361136345764
@@ -192,6 +203,7 @@ MonoBehaviour:
     - a
     - b
     - result
+    - forceSetValue
     values:
     - _fieldName: a
       _node: {fileID: 114652361136345764}
@@ -223,9 +235,19 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  a: 0.32
-  b: 0.54
-  result: -0.22000003
+    - _fieldName: forceSetValue
+      _node: {fileID: 114652361136345764}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  a: 1
+  b: 2
+  forceSetValue: 55
+  result: 55
   mathType: 1
 --- !u!114 &114691264837736136
 MonoBehaviour:
@@ -246,6 +268,7 @@ MonoBehaviour:
     - a
     - b
     - result
+    - forceSetValue
     values:
     - _fieldName: a
       _node: {fileID: 114691264837736136}
@@ -277,9 +300,19 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: forceSetValue
+      _node: {fileID: 114691264837736136}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   a: 5
-  b: 10
-  result: 50
+  b: 6
+  forceSetValue: 66
+  result: 66
   mathType: 2
 --- !u!114 &114775482956350040
 MonoBehaviour:
@@ -300,6 +333,7 @@ MonoBehaviour:
     - a
     - b
     - result
+    - forceSetValue
     values:
     - _fieldName: a
       _node: {fileID: 114775482956350040}
@@ -331,7 +365,17 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  a: 0.81
-  b: 1.33
-  result: 2.14
+    - _fieldName: forceSetValue
+      _node: {fileID: 114775482956350040}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  a: 3
+  b: 4
+  forceSetValue: 45
+  result: 45
   mathType: 0

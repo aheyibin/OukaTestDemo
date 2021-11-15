@@ -1,4 +1,5 @@
 {
+  "com.github.siccity.xnode": "https://github.com/siccity/xNode.git",
   "scopedRegistries": [
     {
       "name": "syyx-tpf",
@@ -9,6 +10,7 @@
     }
   ],
   "dependencies": {
+    "com.github.siccity.xnode": "https://github.com/siccity/xNode.git",
     "com.syyx.tpfsdk": "0.0.19",
     "com.unity.ads": "2.0.8",
     "com.unity.analytics": "3.2.3",
@@ -46,5 +48,11 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
+  },
+  "lock": {
+    "com.github.siccity.xnode": {
+      "revision": "HEAD",
+      "hash": "286b9a167a539efdedd6c3d131b049edd0019d41"
+    }
   }
 }

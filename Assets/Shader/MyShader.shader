@@ -34,8 +34,8 @@ Shader "Custom/MyShader"
             fixed4 my_frag(float2 uv : TEXCOORDO):COLOR
             {
                 //return fixed4(1.0,0.0,0.0,1.0);
-                //return _Color;
-                return tex2D(_MainTex,uv);
+                return _Color;
+                //return tex2D(_MainTex,uv);
             }
             ENDCG
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
-using TPFSDK;
+//using TPFSDK;
 using UnityEngine;
 using Service;
 using UnityEngine.UI;
@@ -54,55 +54,55 @@ public class ClientTest : MonoBehaviour
         return re;
     }
 
-    public void login()
-    { // login
+    //public void login()
+    //{ // login
 
-        TPFSdkEventDelegate m_event;
-        m_event = Show;
-        TPFSdkInfo info = new TPFSdkInfo();
-        info.SetData("account", "qiyu111");
-        info.SetData("accountType", "0");
-        info.SetData("password", "qiyu111");
-        info.SetData("type", "1");
-        info.SetData("checkType", "0");
+    //    TPFSdkEventDelegate m_event;
+    //    m_event = Show;
+    //    TPFSdkInfo info = new TPFSdkInfo();
+    //    info.SetData("account", "qiyu111");
+    //    info.SetData("accountType", "0");
+    //    info.SetData("password", "qiyu111");
+    //    info.SetData("type", "1");
+    //    info.SetData("checkType", "0");
 
-        ITPFSdk.Instance.Login(info, (p) => { Debug.Log("On login callback"); });
-        //ITPFSdk.Instance.Login(info, m_event);
-    }
-    public void Register()
-    { // Register
-            TPFSdkInfo info = new TPFSdkInfo();
-            info.SetData("type", 0);
-            info.SetData("account", "myAccount");
-            info.SetData("password", "myPassword");
-            ITPFSdk.Instance.Register(info,
-                (p) =>
-                {
-                    Debug.Log(p.ErrorMessage); 
-                    Debug.Log("On Register callback");
-                }
-            );
+    //    ITPFSdk.Instance.Login(info, (p) => { Debug.Log("On login callback"); });
+    //    //ITPFSdk.Instance.Login(info, m_event);
+    //}
+    //public void Register()
+    //{ // Register
+    //        TPFSdkInfo info = new TPFSdkInfo();
+    //        info.SetData("type", 0);
+    //        info.SetData("account", "myAccount");
+    //        info.SetData("password", "myPassword");
+    //        ITPFSdk.Instance.Register(info,
+    //            (p) =>
+    //            {
+    //                Debug.Log(p.ErrorMessage); 
+    //                Debug.Log("On Register callback");
+    //            }
+    //        );
 
-        TPFSdkInfo info2 = new TPFSdkInfo();
-        info2.SetData("type", 1);
-        info2.SetData("phoneNum", "15915410252");
-        ITPFSdk.Instance.VerifyCode(info2,
-                (sdkEvent) =>
-                {
-                    Debug.Log(string.Format("{0} -- {1}", sdkEvent.ErrorCode, sdkEvent.ErrorMessage));
-                    Debug.Log("On Register callback");
-                }
-            );
-    }
+    //    TPFSdkInfo info2 = new TPFSdkInfo();
+    //    info2.SetData("type", 1);
+    //    info2.SetData("phoneNum", "15915410252");
+    //    ITPFSdk.Instance.VerifyCode(info2,
+    //            (sdkEvent) =>
+    //            {
+    //                Debug.Log(string.Format("{0} -- {1}", sdkEvent.ErrorCode, sdkEvent.ErrorMessage));
+    //                Debug.Log("On Register callback");
+    //            }
+    //        );
+    //}
 
     public void LoginServer()
     {
         UserService.Instance.LoginServer("ouka","123456");   
     }
 
-    public void Show(TPFSdkEvent e)
-    {
+    //public void Show(TPFSdkEvent e)
+    //{
 
-        Debug.Log("Login Test");
-    }
+    //    Debug.Log("Login Test");
+    //}
 }

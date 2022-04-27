@@ -1,17 +1,6 @@
 {
-  "com.github.siccity.xnode": "https://github.com/siccity/xNode.git",
-  "scopedRegistries": [
-    {
-      "name": "syyx-tpf",
-      "url": "http://10.100.3.46:8080",
-      "scopes": [
-        "com.syyx"
-      ]
-    }
-  ],
   "dependencies": {
     "com.github.siccity.xnode": "https://github.com/siccity/xNode.git",
-    "com.syyx.tpfsdk": "0.0.19",
     "com.unity.ads": "2.0.8",
     "com.unity.analytics": "3.2.3",
     "com.unity.assetbundlebrowser": "1.7.0",

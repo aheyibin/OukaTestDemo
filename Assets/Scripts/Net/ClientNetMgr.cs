@@ -3,7 +3,7 @@ using System.IO;
 using Msg;
 using ProtoBuf;
 //using QF;
-using TPFSDK;
+//using TPFSDK;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -40,7 +40,7 @@ public class ClientNetMgr : Singleton<ClientNetMgr>
         m_router.Userid = "uid";
         m_router.Token = "token";
         m_router.serviceName = service;
-        m_router.channlId = ITPFSdk.Instance.channelId;
+        //m_router.channlId = ITPFSdk.Instance.channelId;
 
         m_router.msgId = msgId;
 

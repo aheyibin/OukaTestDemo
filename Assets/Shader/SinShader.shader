@@ -45,12 +45,19 @@ Shader "Custom/SinShader"
                 
                 float dist = distance(v.vertex.xyz,float3(0,0,0));
                 float h = sin(dist + _Time.z);
-                
+
+                //1
                 o.vertex = mul(unity_ObjectToWorld,v.vertex);
                 o.vertex.y = h;
                 o.vertex = mul(unity_WorldToObject,o.vertex);
-
                 o.vertex = UnityObjectToClipPos(o.vertex);
+                //1
+
+                //2
+                //o.vertex.y = h;
+                //o.vertex = UnityObjectToClipPos(v.vertex);
+                //2
+
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 //UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;

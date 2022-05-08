@@ -1,23 +1,22 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-Shader "Custom/SinShader"
+﻿Shader "Custom/UVShader"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _SubTex ("Texture", 2D) = "white" {}
     }
     SubShader
     {
-        Tags {"RenderType"="Opaque"}
+        Tags { "RenderType"="Opaque" }
         LOD 100
-        
+
         Pass
         {
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
             // make fog work
-            //#pragma multi_compile_fog
+            // #pragma multi_compile_fog
 
             #include "UnityCG.cginc"
 
@@ -31,30 +30,17 @@ Shader "Custom/SinShader"
             {
                 float2 uv : TEXCOORD0;
                 //UNITY_FOG_COORDS(1)
-                float4 vertex : POSITION;
+                float4 vertex : SV_POSITION;
             };
 
             sampler2D _MainTex;
+            sampler2D _SubTex;
             float4 _MainTex_ST;
 
             v2f vert (appdata v)
             {
                 v2f o;
-                float dis = distance(v.vertex.xyz,float3(0,0,0));
-                float h = sin(dis + _Time.y);
-
-                //1
-                o.vertex = mul(unity_ObjectToWorld,v.vertex);
-                o.vertex.y = h;
-                o.vertex = mul(unity_WorldToObject,o.vertex);
-                o.vertex = UnityObjectToClipPos(o.vertex);
-                //1
-
-                //2
-                //o.vertex.y = h;
-                //o.vertex = UnityObjectToClipPos(v.vertex);
-                //2
-
+                o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 //UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
@@ -62,8 +48,12 @@ Shader "Custom/SinShader"
 
             fixed4 frag (v2f i) : SV_Target
             {
+                float2 uv_offset = float2(0,0);
+                uv_offset.x = _Time.y * 0.1f;
+                uv_offset.y = _Time.y * 0.1f;
+                fixed4 light_color = tex2D(_SubTex,i.uv+uv_offset);
                 // sample the texture
-                fixed4 col = tex2D(_MainTex, i.uv);
+                fixed4 col = tex2D(_MainTex, i.uv) + light_color;
                 // apply fog
                 //UNITY_APPLY_FOG(i.fogCoord, col);
                 return col;
